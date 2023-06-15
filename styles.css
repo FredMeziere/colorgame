@@ -16,6 +16,10 @@ header {
     justify-content: center;
     flex-direction: column;
 }
+
+.header-rgb{
+    font-size: 32px;
+}
 .header-start {
     display: flex;
     align-items: center;
