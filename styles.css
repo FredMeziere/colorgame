@@ -1,0 +1,102 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(126, 172, 172);
+    flex-direction: column;
+
+}
+
+header {
+    width: 1200px;
+}
+.header-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header-start {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+}
+.header-difficulty {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100px;
+}
+
+
+.difficulty-easy:hover{
+    background-color: rgb(126, 172, 172);
+}
+
+
+.pickacolor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 1200px;
+    background-color: rgb(126, 172, 172);
+}
+
+
+.color-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.color1 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 25px;
+    border-radius: 30px;
+}
+.color2 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 25px;
+    border-radius: 30px;
+}
+.color3 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 25px;
+    border-radius: 30px;
+}
+
+.color-bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.color4 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 25px;
+    border-radius: 30px;
+}
+.color5 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 25px;
+    border-radius: 30px;
+}
+.color6 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 25px;
+    border-radius: 30px;
+}
