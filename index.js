@@ -17,31 +17,39 @@ function getRandomNumber(min, max) {
   }
   const randomNumber = getRandomNumber(0, 255);
 
-  function updateRgb(){
-  const color = "rgb(" + red + ", " + green + ", " + blue + ")";
-  rgbDiv.textContent = color;
-  } 
-  newGame.addEventListener("click", updateRgb);
+  let targetColor; 
 
-  function newSquareColor(){
+  function updateRgb() {
     const newRed = getRandomNumber(0, 255);
     const newGreen = getRandomNumber(0, 255);
     const newBlue = getRandomNumber(0, 255);
   
-    const newColor = "rgb(" + newRed + ", " + newGreen + ", " + newBlue + ")";
+    targetColor = "rgb(" + newRed + ", " + newGreen + ", " + newBlue + ")";
+    rgbDiv.textContent = "RGB (" + newRed + ", " + newGreen + ", " + newBlue + ")";
+    console.log(targetColor);
+  }
   
-    square1.style.backgroundColor = newColor;
+  function newSquareColor() {
+
+    square1.style.backgroundColor = "rgb(" + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ")";
     square2.style.backgroundColor = "rgb(" + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ")";
     square3.style.backgroundColor = "rgb(" + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ")";
     square4.style.backgroundColor = "rgb(" + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ")";
     square5.style.backgroundColor = "rgb(" + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ")";
     square6.style.backgroundColor = "rgb(" + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ", " + getRandomNumber(0, 255) + ")";
   
+ 
     const randomIndex = getRandomNumber(1, 6);
     const randomSquare = [square1, square2, square3, square4, square5, square6][randomIndex];
-    randomSquare.style.backgroundColor = newColor;
+    randomSquare.style.backgroundColor = targetColor;
+  
+  
+    randomSquare.addEventListener("click", function() {
+      if (randomSquare.style.backgroundColor === targetColor) {
+        alert("Vous avez gagné !");
+      }
+    });
   }
-
 
   newGame.addEventListener("click", updateRgb);
   newGame.addEventListener("click", newSquareColor);
